@@ -1,0 +1,96 @@
+/*
+    header
+*/
+.header {
+    /* header__top */
+   &__top {
+       height: 100px;
+       position: relative;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   &__logo {
+        text-align: center;
+   }
+
+   &__btn {
+        position: absolute;
+        top: 0;
+        left: percentage(990/1366);
+   }
+
+   @include sp {
+        &__top {
+            justify-content: space-between;
+        }
+
+        &__logo {
+            padding-left: 15px;
+        }
+
+       &__btn {
+           left: auto;
+            right: 0;
+            bottom: 0;
+       }
+   }
+
+   /* header__nav */
+   &__nav {
+       background-color: $MainColor;
+       height: 100px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+   }
+   &__list {
+       width: 800px;
+       padding: 0 10px;
+       display: flex;
+       justify-content: center;
+   }
+   &__item {
+       flex: 1 1 percentage(1/6);
+       font-size: 1.8rem; 
+       line-height: 1;
+        font-weight: bold;
+       text-align: center;
+       border-left: 1px solid currentColor;
+       transition: ease 0.3s;
+       cursor: pointer;
+       &:last-child {
+           border-right: 1px solid currentColor;
+       }
+
+       &:hover, &:focus {
+           opacity: 0.6;
+       }
+   }
+
+   &__list-icon {
+       border: none;
+       background-color: transparent;
+       font-size: 4rem;
+       position: absolute;
+       right: 6%;
+   }
+}
+/*
+    header end
+*/
+
+.sm-only {
+    display: none;
+}
+
+@include sp {
+    .lg-only {
+        display: none;
+    }
+    .sm-only {
+        display: inline-block;
+    }
+}

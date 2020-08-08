@@ -1,0 +1,104 @@
+/* 
+    panel, top-panel
+*/
+.top-panel {
+    height: 598px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    background: #aaffff url('../images/bg1_fv.jpg') no-repeat; 
+    background-size:  cover;
+
+    &__inner {
+        z-index: 2;
+    }
+
+    &__content {
+        margin-left: percentage(116/1366);
+        color: $MainColor;
+        width: percentage($number: 400/1366);
+        padding: 40px 13px;
+    }
+
+    &__heading {
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        line-height: normal;
+    }
+}
+
+@include sp {
+    .top-panel {
+        &__content {
+            width: 80%;
+            background-color: rgba($color: #333, $alpha: 0.4);
+        }
+    }
+}
+
+.panel {
+    // background-color: lightgrey;
+    display: flex;
+    justify-content: flex-end;
+    padding: 128px 0 92px;
+    height: 602px;
+
+    
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        background-color: rgba($color: $MainColor, $alpha: 0.8);
+        width: 604px;
+        margin-right: percentage($number: 110/1366);
+        padding: 70px 30px 50px;
+    }
+
+    &__heading {
+        position: absolute;
+        top: -30px;
+        left: 50px;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            position: absolute;
+            content: '';
+            z-index: -1;
+            top: -2rem;
+            left: -8rem;
+            width: 35rem;
+            height: 0;
+            border-top: 8rem solid #011b3f;
+            border-right: 3rem solid transparent;
+        }
+    }
+
+    &__content {
+        font-weight: 300;
+    }
+
+    &--float_left {
+        justify-content: flex-start;
+        .panel__inner {
+            margin-right: 0;
+            margin-left: percentage($number: 110/1366);
+        }
+    }
+
+}
+
+@include sp {
+    .panel__inner {
+        width: 80%;
+    }
+}
+/* 
+    panel, top-panel end
+*/

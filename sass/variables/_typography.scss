@@ -1,0 +1,32 @@
+// フォントの定義
+
+$fz-base: 18px;
+$fz-head: 16px;
+$fz-title: 36px;
+$fz-subtitle: 25px;
+$fz-subtitle-sp: 20px;
+$fz-form: 16px;
+
+$ff-base: 'Noto Sans JP', sans-serif;
+$ff-head: 'Roboto', sans-serif;
+$ff-title: $ff-head;
+$ff-subtitle: $ff-base;
+$ff-form: "Hiragino Kaku Gothic ProN", sans-serif;
+$ff-news-content: $ff-form;
+$ff-submit: "Avenir", sans-serif;
+
+$fw-base: 700;
+
+$lh-base: 2;
+$lh-head: 1.3;
+$lh-title: 0.6;
+$lh-subtitle: 2;
+$lh-form: $lh-base;
+$lh-submit: 1.5;
+
+$ls-base: 0.05em;
+$ls-head: 0em;
+$ls-title: 0.05em;
+$ls-subtitle: 0.1em;
+$ls-form: $ls-title;
+$ls-submit: $ls-title;

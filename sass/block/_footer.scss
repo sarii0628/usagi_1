@@ -1,0 +1,96 @@
+/*
+    footer
+*/
+.footer {
+    &-main {
+        background-color: $SubColor;
+        padding: 71px 0 41px;
+        text-align: center;
+        &__logo {
+            margin-bottom: 32px;
+        }
+
+        &__list {
+            margin-bottom: 31px;
+        }
+
+        &__item {
+            color: $MainColor;
+            font-weight: normal;
+        }
+
+        &__btns {
+            width: 556px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: space-between;
+            .btn {
+                flex: 0 1 percentage($number: 264/556);
+                display: inline-flex;
+                justify-content: center;
+                padding: 22px 0;
+                text-align: center;
+                font-weight: bold;
+                &--dark {
+                    color: $yellow;
+                    background-color: $SubColor;
+                    border-color: currentColor;
+
+
+                    &:hover, &:focus {
+                        background-color: $yellow;
+                        color: $SubColor;
+                    }
+                }
+            }
+
+        }
+        &__btn-icon {
+            margin-right: .9rem;
+        }
+
+        &__nav {
+            display: flex;
+            justify-content: center;
+            color: $MainColor;
+            font-size: 1.4rem;
+
+            &-item {
+                padding: 0 2rem;
+                border-right: 1px solid currentColor;
+                transition: ease 0.3s;
+                cursor: pointer;
+                &:last-child {
+                    border-right: none;
+                }
+                &:hover, &:focus {
+                    opacity: 0.6;
+                }
+            }
+            
+        }
+    }
+
+    &-btm {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $yellow;
+        font-size: 12px;
+        line-height: 3;
+    }
+}
+
+@include sp {
+    .footer-main__btns {
+        flex-direction: column;
+        width: 80%;
+        .btn {
+            margin-bottom: 20px;
+        }
+    }
+}
+/*
+    footer end
+*/

@@ -1,0 +1,21 @@
+{
+	"name": "neko_corporate",
+	"version": "1.0.0",
+	"author": "coklat",
+	"main": "gulpfile.js",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.26.10",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-sass-glob": "^1.0.9",
+		"gulp-sass": "^4.1.0",
+		"gulp-uglify": "^3.0.2"
+	},
+	"dependencies": {},
+	"scripts": {
+		"format": "prettier-stylelint --quiet --write ./css/style.css"
+	}
+}
